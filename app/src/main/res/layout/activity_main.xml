@@ -1,0 +1,188 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Branding -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOBTRACKER"
+            android:textColor="#7652C8"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12" />
+
+        <!-- Heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Your career journey."
+            android:textColor="#28213D"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Keep every application organized."
+            android:textColor="#716B80"
+            android:textSize="15sp" />
+
+        <!-- Dashboard summary cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/job_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL APPLICATIONS"
+                    android:textColor="#716B80"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txtTotalApplications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="0"
+                    android:textColor="#28213D"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/job_card_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INTERVIEWS"
+                    android:textColor="#716B80"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/txtInterviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="0"
+                    android:textColor="#7652C8"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Recent applications heading -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Recent applications"
+            android:textColor="#28213D"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Search field -->
+        <EditText
+            android:id="@+id/editSearchJobs"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/job_card_background"
+            android:hint="Search company or job title..."
+            android:inputType="text"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:singleLine="true"
+            android:textColor="#28213D"
+            android:textColorHint="#9690A3"
+            android:textSize="15sp" />
+
+        <!-- Status filter label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter by status"
+            android:textColor="#302944"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Status filter -->
+        <Spinner
+            android:id="@+id/spinnerFilterStatus"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/job_card_background"
+            android:entries="@array/job_filter_statuses"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <!-- Empty state -->
+        <TextView
+            android:id="@+id/txtEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/job_card_background"
+            android:gravity="center"
+            android:padding="28dp"
+            android:text="No applications yet.\nTap + Add Job to get started."
+            android:textColor="#716B80"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!-- Dynamically displayed job cards -->
+        <LinearLayout
+            android:id="@+id/jobsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <!-- Add job button -->
+        <Button
+            android:id="@+id/btnAddJob"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#805AD5"
+            android:text="+ Add Job"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

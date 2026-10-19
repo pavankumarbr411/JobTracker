@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">JobTracker</string>
+    <string-array name="job_statuses">
+        <item>Applied</item>
+        <item>Assessment</item>
+        <item>Interview</item>
+        <item>Offer</item>
+        <item>Rejected</item>
+    </string-array>
+
+    <string-array name="job_filter_statuses">
+        <item>All Statuses</item>
+        <item>Applied</item>
+        <item>Assessment</item>
+        <item>Interview</item>
+        <item>Offer</item>
+        <item>Rejected</item>
+    </string-array>
+
+</resources>
